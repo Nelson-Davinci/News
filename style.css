@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --Softorange: hsl(35, 77%, 62%);
+  --Softred: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayishblue: hsl(233, 8%, 79%);
+  --Darkgrayishblue: hsl(236, 13%, 42%);
+  --Verydarkblue: hsl(240, 100%, 5%);
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+nav img p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--Darkgrayishblue);
+}
+
+nav .icon {
+  display: none;
+}
+
+nav .link a {
+  color: var(--Darkgrayishblue);
+  margin-left: 40px;
+}
+
+.hero-content {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pic-container {
+  width: 68%;
+}
+
+.pic-container img {
+  width: 100%;
+  /* height: 70%; */
+}
+
+.pic-container img:first-of-type {
+  display: block;
+}
+
+.pic-container img:last-of-type {
+  display: none;
+}
+
+.pic-container-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.pic-container-text h1 {
+  width: 280px;
+  font-size: 2.3rem;
+  font-weight: 820;
+}
+
+.pic-container-text div {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pic-container-text div p {
+  color: var(--Grayishblue);
+  font-size: 0.85rem;
+}
+
+.pic-container-text div button {
+  width: 120px;
+  height: 30px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: none;
+  background-color: var(--Softred);
+  color: var(--Off-white);
+}
+
+.text-container {
+  width: 28%;
+  background-color: var(--Verydarkblue);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-container h1 {
+  color: var(--Softorange);
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.text-container h4 {
+  color: var(--Off-white);
+  margin: 10px 0px;
+  font-size: 1rem;
+}
+
+.text-container p {
+  font-size: 0.8rem;
+  color: var(--Darkgrayishblue);
+}
+
+.card-container {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.card {
+  display: flex;
+  gap: 15px;
+  width: 28%;
+}
+
+.card img {
+  height: 120px;
+}
+
+.card h1 {
+  color: var(--Grayishblue);
+  font-weight: 800;
+}
+
+.card .text-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h4 {
+  font-weight: 750;
+  font-size: 0.9rem;
+}
+
+.card p {
+  color: var(--Grayishblue);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    display: block;
+  }
+
+  .pic-container {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .text-container {
+    width: 100%;
+    margin: 50px 0px;
+  }
+
+  .text-container div{
+    margin: 40px 0px;
+  }
+
+  .card-container{
+    flex-wrap: wrap;
+  }
+
+  .card{
+    width: 47%;
+  }
+}
+
+@media (max-width: 576px) {
+  nav .link {
+    display: none;
+  }
+
+  nav .icon {
+    display: block;
+  }
+
+  .pic-container img:first-of-type {
+    display: none;
+  }
+
+  .pic-container img:last-of-type {
+    display: block;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .pic-container div {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  .pic-container-text div p {
+    font-size: 0.85rem;
+    margin: 20px 0px;
+  }
+
+  .pic-container,
+  .pic-container-text h1 {
+    width: 100%;
+  }
+
+  .card-container{
+    flex-direction: column;
+  }
+
+  .card{
+    width: 100%;
+  }
+
+  @media (max-width: 364px){
+    .card img{
+        height: 130px;
+    }
+  }
+}
+
+/* the first-of-type and the last-of-type selector are types of selector in css */
+/* first-of-type selects the first occurrence of a particular element type among its siblings. */
+/* last-of-type selects the last occurrence of a particular element type among its siblings. */
